@@ -8,7 +8,7 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="110dp"
         android:paddingTop="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
@@ -17,17 +17,20 @@
             android:id="@+id/forceStartStop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:gradientColorOnStart="#00264d"
-            app:gradientColorOnEnd="#004d99"
-            app:gradientColorOffStart="#006bb3"
-            app:gradientColorOffEnd="#4db8ff"
-            app:gradientColorSelectedStart="#46d9ff"
-            app:gradientColorSelectedEnd="#b9e6ff"
+            app:gradientColorOnStart="@color/seg_btn_on_start"
+            app:gradientColorOnEnd="@color/seg_btn_on_end"
+            app:gradientColorOffStart="@color/seg_btn_off_start"
+            app:gradientColorOffEnd="@color/seg_btn_off_end"
+            app:gradientColorSelectedStart="@color/seg_btn_selected_start"
+            app:gradientColorSelectedEnd="@color/seg_btn_selected_end"
             app:textStyle="@style/TextViewStyleSegmentedButtonHeader"
-            app:strokeColor="#bbbbbb"
-            app:strokeWidth="3dp"
-            app:cornerRadius="10dp"
-            app:btnPaddingTop="10dp" />
+            app:strokeColor="@color/seg_btn_stroke"
+            app:strokeWidth="2dp"
+            app:cornerRadius="12dp"
+            app:btnPaddingTop="8dp"
+            app:btnPaddingBottom="8dp"
+            app:btnPaddingLeft="8dp"
+            app:btnPaddingRight="8dp" />
 
     </LinearLayout>
 

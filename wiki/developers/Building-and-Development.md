@@ -20,7 +20,7 @@ cd ~/git/syncthing-android
 python3 scripts/install_minimum_android_sdk_prerequisites.py
 #
 # Build.
-export ANDROID_HOME=~/git/syncthing-android-prereq
+# ANDROID_HOME is automatically detected from local.properties if not set.
 ./gradlew buildNative
 #
 # Flavor: debug

@@ -95,7 +95,7 @@ jobs:
           tag: ${{ github.event.inputs.tag }}
           artifacts: "./artifacts/*.apk"
           artifactErrorsFailBuild: true
-          name: Syncthing-Fork ${{ github.event.inputs.tag }}
+          name: Syncthing Refined ${{ github.event.inputs.tag }}
           bodyFile: "app/src/main/play/release-notes/en-US/default.txt"
           prerelease: ${{ contains(github.event.inputs.tag, '-rc.') }}
           draft: true

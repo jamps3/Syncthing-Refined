@@ -49,6 +49,8 @@ public class SegmentedButton extends LinearLayout {
     private int mTextStyle;
     private int mBtnPaddingTop;
     private int mBtnPaddingBottom;
+    private int mBtnPaddingLeft;
+    private int mBtnPaddingRight;
 
     private OnClickListenerSegmentedButton mOnClickListenerExternal;
 
@@ -82,6 +84,8 @@ public class SegmentedButton extends LinearLayout {
         mTextStyle = a.getResourceId(R.styleable.SegmentedButton_textStyle, -1);
         mBtnPaddingTop = a.getDimensionPixelSize(R.styleable.SegmentedButton_btnPaddingTop, 0);
         mBtnPaddingBottom = a.getDimensionPixelSize(R.styleable.SegmentedButton_btnPaddingBottom, 0);
+        mBtnPaddingLeft = a.getDimensionPixelSize(R.styleable.SegmentedButton_btnPaddingLeft, 0);
+        mBtnPaddingRight = a.getDimensionPixelSize(R.styleable.SegmentedButton_btnPaddingRight, 0);
 
 
         a.recycle();
@@ -111,6 +115,7 @@ public class SegmentedButton extends LinearLayout {
             button.setText(titles[i]);
             button.setTag(Integer.valueOf(i));
             button.setOnClickListener(mOnClickListener);
+            button.setAllCaps(false);
             if (mTextStyle != -1) {
                 button.setTextAppearance(getContext(), mTextStyle);
             }
@@ -139,7 +144,7 @@ public class SegmentedButton extends LinearLayout {
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         1);
             addView(button, llp);
-            button.setPadding(0, mBtnPaddingTop, 0, mBtnPaddingBottom);
+            button.setPadding(mBtnPaddingLeft, mBtnPaddingTop, mBtnPaddingRight, mBtnPaddingBottom);
         }
     }
 
@@ -292,8 +297,8 @@ public class SegmentedButton extends LinearLayout {
             }
         }
 
-        btnLast.setPadding(0, mBtnPaddingTop, 0, mBtnPaddingBottom);
-        btnNext.setPadding(0, mBtnPaddingTop, 0, mBtnPaddingBottom);
+        btnLast.setPadding(mBtnPaddingLeft, mBtnPaddingTop, mBtnPaddingRight, mBtnPaddingBottom);
+        btnNext.setPadding(mBtnPaddingLeft, mBtnPaddingTop, mBtnPaddingRight, mBtnPaddingBottom);
 
         mSelectedButtonIndex = btnNextIndex;
     }

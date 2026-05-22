@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#0288D1</color>
-    <color name="primary_dark">#002171</color>
+    <color name="primary">#000000</color>
+    <color name="primary_dark">#000000</color>
+    <color name="accent">#0080ff</color>
+    <color name="window_background">#000000</color>
+    <color name="card_background">#000000</color>
+    <color name="divider">#121212</color>
 
     <!-- MainActivity start -->
-    <color name="bottom_navigation_bar">#263238</color>
+    <color name="bottom_navigation_bar">#000000</color>
     <!-- MainActivity end -->
+
+    <color name="seg_btn_on_start">#000000</color>
+    <color name="seg_btn_on_end">#001a33</color>
+    <color name="seg_btn_off_start">#001a33</color>
+    <color name="seg_btn_off_end">#004d99</color>
+    <color name="seg_btn_selected_start">#0059b3</color>
+    <color name="seg_btn_selected_end">#0080ff</color>
+    <color name="seg_btn_stroke">#333333</color>
 </resources>

@@ -30,6 +30,9 @@ abstract class BuildNativeTask @Inject constructor(
     abstract val ndkVersion: Property<String>
 
     @get:Input
+    abstract val androidHome: Property<String>
+
+    @get:Input
     abstract val pythonBinary: Property<String>
 
     @TaskAction
@@ -38,6 +41,7 @@ abstract class BuildNativeTask @Inject constructor(
 
         val env = mapOf(
             "NDK_VERSION" to ndkVersion.get(),
+            "ANDROID_HOME" to androidHome.get(),
         )
 
         val fullEnv = System.getenv().toMutableMap().apply {
@@ -76,9 +80,20 @@ tasks.register<BuildNativeTask>("buildNative") {
     group = "build"
     description = "Builds native Syncthing binaries"
 
+    val localProps = java.util.Properties()
+    val localFile = rootProject.file("local.properties")
+    if (localFile.exists()) {
+        localFile.inputStream().use { localProps.load(it) }
+    }
+    val sdkDir = System.getenv("ANDROID_HOME")
+        ?: System.getenv("ANDROID_SDK_ROOT")
+        ?: localProps.getProperty("sdk.dir")
+        ?: ""
+
     inputDir.set(layout.projectDirectory.dir("src"))
     workingDir.set(layout.projectDirectory)
     outputDir.set(layout.projectDirectory.dir("../app/src/main/jniLibs"))
     ndkVersion.set(libs.versions.ndk.version)
+    androidHome.set(sdkDir)
     pythonBinary.set(detectPythonBinary())
 }

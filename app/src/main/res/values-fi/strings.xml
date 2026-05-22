@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Syncthing-Fork</string>
+    <string name="app_name">Syncthing Refined</string>
     <string name="app_description">Avoin, luotettava ja hajautettu tiedostojensynkronointisovellus.</string>
     <!-- FirstStartActivity -->
     <!-- Title for dialog displayed on first start -->
-    <string name="welcome_title">Tervetuloa Syncthingiin Androidille</string>
+    <string name="welcome_title">Tervetuloa Syncthing Refinediin Androidille</string>
     <!-- Welcome wizard -->
     <!-- Slide "Introduction" -->
     <string name="introduction">Johdanto</string>
-    <string name="welcome_text">Syncthing on avoimen lähdekoodin tiedostojensynkronointisovellus. Jakaaksesi tiedostoja muiden laitteiden kanssa tarvitset niiden uniikit laitetunnukset laitelistaasi. Myöhemmin voit valita, mitä kansioita jaat millekin laitteille. \n \n</string>
+    <string name="welcome_text">Syncthing Refined on avoimen lähdekoodin tiedostojensynkronointisovellus. Jakaaksesi tiedostoja muiden laitteiden kanssa tarvitset niiden uniikit laitetunnukset laitelistaasi. Myöhemmin voit valita, mitä kansioita jaat millekin laitteille. \n \n</string>
     <!-- Slide "Storage Permission" -->
     <string name="storage_permission_title">Tallennustilan lupa</string>
     <string name="storage_permission_desc">Syncthing on käytettävä tallennustilaa tiedostojen synkronointia varten.</string>
@@ -43,7 +43,7 @@
     <string name="refresh">Virkistä</string>
     <!-- PhotoShootActivity -->
     <string name="photo_shoot_launcher_title">Sync. Kamera</string>
-    <string name="photo_shoot_activity_title">Syncthing-Fork Kamera</string>
+    <string name="photo_shoot_activity_title">Syncthing Refined Kamera</string>
     <string name="photo_shoot_intro_welcome_title">Tervetuloa Syncthing Kameraan</string>
     <string name="photo_shoot_intro_permission_title">Vaaditut käyttöoikeudet</string>
     <string name="photo_shoot_intro_no_camera">Pahoittelut, tässä laitteessa ei ole kameraa.</string>
@@ -133,8 +133,8 @@
     <!-- StatusFragment -->
     <string name="status_fragment_title">Tila</string>
     <string name="button_follow_run_conditions">NOUDATA KÄYNTIEHTOJA</string>
-    <string name="button_force_start">PAKOTA KÄYNNISTYMINEN \nOHITA KÄYNTIEHDOT</string>
-    <string name="button_force_stop">PAKOTA PYSÄYTTÄMINEN \nOHITA KÄYNTIEHDOT</string>
+    <string name="button_force_start">PAKOTA KÄYNNISTYS \nOHITA EHDOT</string>
+    <string name="button_force_stop">PAKOTA PYSÄYTYS \nOHITA EHDOT</string>
     <string name="syncthing_starting">Syncthing on käynnistymässä.</string>
     <string name="syncthing_running">Syncthing on käynnissä.</string>
     <string name="syncthing_not_running">Syncthing ei ole käynnissä.</string>

@@ -4,11 +4,20 @@ import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+
+private val OledDarkColorScheme = darkColorScheme(
+    primary = Color(0xFF0080FF),
+    background = Color.Black,
+    surface = Color.Black,
+    surfaceVariant = Color(0xFF121212),
+    onBackground = Color.White,
+    onSurface = Color.White
+)
 
 @Composable
 fun ApplicationTheme(
@@ -16,16 +25,14 @@ fun ApplicationTheme(
 ) {
     val isDarkTheme = isSystemInDarkTheme()
     val colorScheme =
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            if (isDarkTheme)
-                dynamicDarkColorScheme(LocalContext.current)
-            else
-                dynamicLightColorScheme(LocalContext.current)
+        if (isDarkTheme) {
+            OledDarkColorScheme
         } else {
-            if (isDarkTheme)
-                darkColorScheme()
-            else
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                dynamicLightColorScheme(LocalContext.current)
+            } else {
                 lightColorScheme()
+            }
         }
 
     MaterialTheme(

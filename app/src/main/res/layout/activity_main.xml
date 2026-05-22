@@ -40,7 +40,7 @@
                 android:contentDescription="@string/exit"
                 android:tint="@color/design_default_color_on_primary"
                 app:srcCompat="@drawable/ic_outline_exit_to_app_24"
-                app:backgroundTint="@color/primary"
+                app:backgroundTint="@color/accent"
                 app:fabSize="normal" />
 
         </RelativeLayout>

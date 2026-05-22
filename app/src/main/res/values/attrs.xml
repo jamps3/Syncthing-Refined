@@ -18,5 +18,7 @@
       <attr name="textStyle" format="reference" />
       <attr name="btnPaddingTop" format="dimension" />
       <attr name="btnPaddingBottom" format="dimension" />
+      <attr name="btnPaddingLeft" format="dimension" />
+      <attr name="btnPaddingRight" format="dimension" />
     </declare-styleable>
 </resources>
