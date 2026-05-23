@@ -191,7 +191,8 @@ project.afterEvaluate {
         dependsOn("validateAppVersionCode")
     }
 
-    val isCopilot = System.getenv("IS_COPILOT")?.toBoolean() ?: false
+    val isCopilot = (System.getenv("IS_COPILOT")?.toBoolean() ?: false) || 
+                    (project.hasProperty("IS_COPILOT") && project.property("IS_COPILOT").toString().toBoolean())
     if (!isCopilot) {
         tasks
             .matching { it.name.startsWith("merge") && it.name.endsWith("JniLibFolders") }
